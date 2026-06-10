@@ -87,7 +87,7 @@ echo "Exit code: $?"
 
 Complétez `.github/workflows/security.yml` pour que la pipeline lance Semgrep à chaque push et échoue si des vulnérabilités sont détectées.
 
-> **Référence :** [semgrep.dev/docs](https://semgrep.dev/docs/semgrep-ci/running-semgrep-ci-with-a-third-party-ci-provider/)
+> **Référence :** https://docs.semgrep.dev/
 
 ```bash
 git add .github/workflows/security.yml
