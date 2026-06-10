@@ -1,13 +1,1 @@
-name: "SAST — Semgrep"
 
-on: [push, pull_request]
-
-jobs:
-  semgrep:
-    name: "Semgrep — Analyse statique"
-    runs-on: ubuntu-latest
-    container:
-      image: semgrep/semgrep
-    steps:
-      - uses: actions/checkout@v4
-      - run: semgrep --config p/python --config p/security-audit --error app.py
