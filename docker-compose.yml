@@ -1,10 +1,9 @@
 services:
   app:
-    image: python:3.11-slim
+    image: php:8.2-cli
     working_dir: /app
     volumes:
       - .:/app
-    command: >
-      sh -c "pip install -r requirements.txt -q && python app.py"
+    command: php -S 0.0.0.0:8080 index.php
     ports:
-      - "5000:5000"
+      - "8080:8080"

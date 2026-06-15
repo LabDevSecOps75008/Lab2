@@ -1,1 +1,25 @@
+name: SAST — Semgrep PHP
 
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  semgrep:
+    name: Analyse statique du code PHP
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep   # Semgrep tourne dans son propre conteneur — pas d'installation requise
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Scan Semgrep PHP
+        # TODO — compléter cette commande :
+        #   • utiliser la config PHP  →  --config p/php
+        #   • cibler index.php
+        #   • faire échouer la pipeline si des vulnérabilités sont trouvées  →  --error
+        run: |
+          echo "TODO: remplacer cette ligne par la commande semgrep"
